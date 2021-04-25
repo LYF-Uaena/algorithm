@@ -1,7 +1,5 @@
 package com.algorithm.utils;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.lang.reflect.Array;
 import java.security.SecureRandom;
 
@@ -19,9 +17,7 @@ public class ArrayUtils {
      * @param ts  the ts
      * @return the t[]
      */
-    @SuppressWarnings({"unchecked"})
     public static <T extends Number> T[] createArray(T[] ts, int length, T t) {
-
         SecureRandom random = new SecureRandom();
         T[] array = newArray(ts.getClass().getComponentType(), length);
         long start = System.nanoTime();

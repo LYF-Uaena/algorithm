@@ -1,7 +1,5 @@
 package com.algorithm;
 
-import com.algorithm.utils.ArrayUtils;
-
 import java.util.Arrays;
 
 /**
@@ -21,10 +19,17 @@ public class BinarySearch {
                 4204, 233, 8833, 5976, 4462, 5360, 9970, 5148, 3175, 4803, 4192, 969, 8715, 2576, 2546, 7481, 5812,
                 1479, 611, 5242, 4856};
 
+        InsertionSort.insertionSort(its);
+        System.out.println(Arrays.toString(its));
         long start = System.nanoTime();
+
+        long end = System.nanoTime();
+        System.out.println("排序时间" + (end - start) / 1000000 + " ms");
+
+        start = System.nanoTime();
         System.out.println("递归：当前查找key的索引为："
                 + recursionHalfFind(its, 0, its.length - 1, 8065));
-        long end = System.nanoTime();
+        end = System.nanoTime();
         System.out.println("递归：运行时间： " + (end - start) + " ns");
 
         start = System.nanoTime();
